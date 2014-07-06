@@ -7,6 +7,8 @@
 
 'use strict';
 
+var isRelative = require('is-relative');
+
 /**
  * **Example:**
  *
@@ -34,4 +36,8 @@ module.exports = function isAbsolute(filepath) {
   if ('\\\\' == filepath.substring(0, 2)) {
     return true;
   }
+  if (!isRelative(filepath)) {
+    return true;
+  }
 };
+

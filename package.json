@@ -1,7 +1,7 @@
 {
   "name": "is-absolute",
   "description": "Return true if a file path is absolute.",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "homepage": "https://github.com/jonschlinkert/is-absolute",
   "author": {
     "name": "Jon Schlinkert",
@@ -21,13 +21,20 @@
     }
   ],
   "keywords": [
-    "docs",
-    "documentation",
-    "generate",
-    "generator",
-    "markdown",
-    "templates",
-    "verb"
+    "absolute",
+    "check",
+    "file",
+    "filepath",
+    "is",
+    "normalize",
+    "path",
+    "path.relative",
+    "relative",
+    "resolve",
+    "slash",
+    "slashes",
+    "uri",
+    "url"
   ],
   "main": "index.js",
   "engines": {
@@ -41,5 +48,8 @@
     "mocha": "*",
     "verb": ">= 0.2.6",
     "verb-tag-jscomments": ">= 0.1.4"
+  },
+  "dependencies": {
+    "is-relative": "^0.1.0"
   }
 }
