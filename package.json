@@ -1,7 +1,7 @@
 {
   "name": "is-absolute",
   "description": "Return true if a file path is absolute.",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "homepage": "https://github.com/jonschlinkert/is-absolute",
   "author": {
     "name": "Jon Schlinkert",
@@ -41,8 +41,5 @@
     "mocha": "*",
     "verb": ">= 0.2.6",
     "verb-tag-jscomments": ">= 0.1.4"
-  },
-  "dependencies": {
-    "normalize-path": "^0.1.0"
   }
 }

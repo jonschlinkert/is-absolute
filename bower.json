@@ -1,0 +1,10 @@
+{
+  "name": "is-absolute",
+  "version": "0.1.2",
+  "main": [
+    "index.js"
+  ],
+  "ignore": [
+    "test"
+  ]
+}
