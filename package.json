@@ -37,6 +37,10 @@
     "url"
   ],
   "main": "index.js",
+  "files": [
+    "index.js",
+    "LICENSE-MIT"
+  ],
   "engines": {
     "node": ">=0.10.0"
   },
