@@ -47,6 +47,9 @@
   "scripts": {
     "test": "mocha -R spec"
   },
+  "files": [
+    "index.js"
+  ],
   "devDependencies": {
     "chai": "^1.9.1",
     "mocha": "*",
