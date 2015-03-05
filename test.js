@@ -1,8 +1,8 @@
 /*!
- * is-absolute <https:\\github.com/jonschlinkert/is-absolute>
+ * is-absolute <https://github.com/jonschlinkert/is-absolute>
  *
- * Copyright (c) 2014 Jon Schlinkert, contributors.
- * Licensed under the MIT License
+ * Copyright (c) 2014-2015, Jon Schlinkert.
+ * Licensed under the MIT License.
  */
 
 'use strict';
