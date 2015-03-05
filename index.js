@@ -1,29 +1,13 @@
 /*!
- * is-absolute <https:\\github.com/jonschlinkert/is-absolute>
+ * is-absolute <https://github.com/jonschlinkert/is-absolute>
  *
- * Copyright (c) 2014 Jon Schlinkert, contributors.
- * Licensed under the MIT License
+ * Copyright (c) 2014-2015, Jon Schlinkert.
+ * Licensed under the MIT License.
  */
 
 'use strict';
 
 var isRelative = require('is-relative');
-
-/**
- * **Example:**
- *
- * ```js
- * isAbsolute('a/b/c.js');
- * //=> 'false'
- *
- * isAbsolute('C://a/b/c.js');
- * //=> 'true'
- * ```
- *
- * @param {String} `filepath`
- * @return {Boolean}
- * @api public
- */
 
 module.exports = function isAbsolute(filepath) {
   if ('/' === filepath[0]) {

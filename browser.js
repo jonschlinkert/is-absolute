@@ -8,22 +8,6 @@
 
 'use strict';
 
-/**
- * **Example:**
- *
- * ```js
- * isAbsolute('a/b/c.js');
- * //=> 'false'
- *
- * isAbsolute('C://a/b/c.js');
- * //=> 'true'
- * ```
- *
- * @param {String} `filepath`
- * @return {Boolean}
- * @api public
- */
-
 module.exports = function isAbsolute(filepath) {
   if ('/' === filepath[0]) {
     return true;
