@@ -5,6 +5,15 @@ var path = require('path');
 var assert = require('assert');
 var isAbsolute = require('./');
 
+if (!path.posix) {
+  path.posix = {};
+  path.posix.isAbsolute = isAbsolute.posix;
+}
+if (!path.win32) {
+  path.win32 = {};
+  path.win32.isAbsolute = isAbsolute.win32;
+}
+
 describe('isAbsolute()', function () {
   it('should throw an error when the value is not a string.', function() {
     assert.throws(function () {
@@ -12,7 +21,7 @@ describe('isAbsolute()', function () {
     }, 'isAbsolute expects a string.');
   });
 
-  it('should pass all node native `path.isAbsolute` tests:', function () {
+  it('should pass all node native `path.win32.isAbsolute` tests:', function () {
     assert.equal(path.win32.isAbsolute('//server/file'), true);
     assert.equal(path.win32.isAbsolute('\\\\server\\file'), true);
     assert.equal(path.win32.isAbsolute('C:/Users/'), true);
@@ -21,7 +30,9 @@ describe('isAbsolute()', function () {
     assert.equal(path.win32.isAbsolute('C:cwd\\another'), false);
     assert.equal(path.win32.isAbsolute('directory/directory'), false);
     assert.equal(path.win32.isAbsolute('directory\\directory'), false);
+  });
 
+  it('should pass all node native `path.posix.isAbsolute` tests:', function () {
     assert.equal(path.posix.isAbsolute('/home/foo'), true);
     assert.equal(path.posix.isAbsolute('/home/foo/..'), true);
     assert.equal(path.posix.isAbsolute('bar/'), false);
