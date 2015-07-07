@@ -17,6 +17,9 @@ describe('isAbsolute()', function () {
     assert(isAbsolute(__filename));
     assert(isAbsolute(path.join(process.cwd())));
     assert(isAbsolute(path.resolve(process.cwd(), 'README.md')));
+    assert(isAbsolute('/foo/a/b/c/d'));
+    assert(isAbsolute('/foo'));
+    assert(!isAbsolute('./foo'));
     assert(!isAbsolute(path.relative(process.cwd(), 'README.md')));
   });
 
@@ -28,6 +31,7 @@ describe('isAbsolute()', function () {
   it('should support windows', function () {
     assert(isAbsolute('c:\\'));
     assert(isAbsolute('//C://user\\docs\\Letter.txt'));
+    assert(!isAbsolute('a:foo/a/b/c/d'));
     assert(!isAbsolute(':\\'));
     assert(!isAbsolute('foo\\bar\\baz'));
     assert(!isAbsolute('foo\\bar\\baz\\'));
