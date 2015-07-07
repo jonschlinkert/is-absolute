@@ -8,20 +8,29 @@
 'use strict';
 
 var isRelative = require('is-relative');
+var win32 = process.platform === 'win32';
 
-module.exports = function isAbsolute(filepath) {
-  if ('/' === filepath[0]) {
+module.exports = function isAbsolute(fp) {
+  if (!win32 && posix(fp)) {
     return true;
   }
-  if (':' === filepath[1] && '\\' === filepath[2]) {
+  return windows(fp);
+};
+
+function windows(fp) {
+  if (/[a-z]/i.test(fp.charAt(0)) && fp.charAt(1) === ':' && fp.charAt(2) === '\\') {
     return true;
   }
   // Microsoft Azure absolute filepath
-  if ('\\\\' == filepath.substring(0, 2)) {
+  if (fp.slice(0, 2) === '\\\\') {
     return true;
   }
-  if (!isRelative(filepath)) {
-    return true;
-  }
-};
+  return !isRelative(fp);
+}
 
+function posix(fp) {
+  return fp.charAt(0) === '/';
+}
+
+module.exports.posix = posix;
+module.exports.windows = windows;
