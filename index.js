@@ -1,23 +1,38 @@
-/*!
- * is-absolute <https://github.com/jonschlinkert/is-absolute>
- *
- * Copyright (c) 2014-2015, Jon Schlinkert.
- * Licensed under the MIT License.
- */
-
 'use strict';
 
 var isRelative = require('is-relative');
-var win32 = process.platform === 'win32';
+var windows = process.platform === 'win32';
 
-module.exports = function isAbsolute(fp) {
-  if (!win32 && posix(fp)) {
+/**
+ * Returns true if a file path is absolute.
+ *
+ * @param  {String} `fp`
+ * @return {Boolean}
+ */
+
+function isAbsolute(fp) {
+  if (typeof fp !== 'string') {
+    throw new TypeError('isAbsolute expects a string.');
+  }
+  if (!windows && isAbsolute.posix(fp)) {
     return true;
   }
-  return windows(fp);
+  return isAbsolute.win32(fp);
 };
 
-function windows(fp) {
+/**
+ * Test posix paths.
+ */
+
+isAbsolute.posix = function posixPath(fp) {
+  return fp.charAt(0) === '/';
+};
+
+/**
+ * Test windows paths.
+ */
+
+isAbsolute.win32 = function win32(fp) {
   if (/[a-z]/i.test(fp.charAt(0)) && fp.charAt(1) === ':' && fp.charAt(2) === '\\') {
     return true;
   }
@@ -26,11 +41,10 @@ function windows(fp) {
     return true;
   }
   return !isRelative(fp);
-}
+};
 
-function posix(fp) {
-  return fp.charAt(0) === '/';
-}
+/**
+ * Expose `isAbsolute`
+ */
 
-module.exports.posix = posix;
-module.exports.windows = windows;
+module.exports = isAbsolute;
