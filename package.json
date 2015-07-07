@@ -1,23 +1,14 @@
 {
   "name": "is-absolute",
   "description": "Return true if a file path is absolute.",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "homepage": "https://github.com/jonschlinkert/is-absolute",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jonschlinkert/is-absolute.git"
-  },
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/is-absolute",
   "bugs": {
     "url": "https://github.com/jonschlinkert/is-absolute/issues"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/jonschlinkert/is-absolute/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "files": [
     "index.js"
   ],
@@ -29,7 +20,7 @@
     "test": "mocha"
   },
   "dependencies": {
-    "is-relative": "^0.1.0"
+    "is-relative": "^0.2.0"
   },
   "devDependencies": {
     "mocha": "*"
@@ -42,12 +33,24 @@
     "is",
     "normalize",
     "path",
-    "path.relative",
+    "path.absolute",
     "relative",
     "resolve",
     "slash",
     "slashes",
     "uri",
     "url"
-  ]
+  ],
+  "verb": {
+    "related": {
+      "list": [
+        "is-absolute",
+        "is-relative",
+        "is-dotfile",
+        "is-glob",
+        "is-unc-path",
+        "is-valid-glob"
+      ]
+    }
+  }
 }
