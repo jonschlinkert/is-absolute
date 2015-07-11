@@ -1,7 +1,13 @@
 'use strict';
 
 var isRelative = require('is-relative');
-var windows = process.platform === 'win32';
+var isWindows = require('is-windows');
+
+/**
+ * Expose `isAbsolute`
+ */
+
+module.exports = isAbsolute;
 
 /**
  * Returns true if a file path is absolute.
@@ -14,11 +20,11 @@ function isAbsolute(fp) {
   if (typeof fp !== 'string') {
     throw new TypeError('isAbsolute expects a string.');
   }
-  if (!windows && isAbsolute.posix(fp)) {
+  if (!isWindows() && isAbsolute.posix(fp)) {
     return true;
   }
   return isAbsolute.win32(fp);
-};
+}
 
 /**
  * Test posix paths.
@@ -42,9 +48,3 @@ isAbsolute.win32 = function win32(fp) {
   }
   return !isRelative(fp);
 };
-
-/**
- * Expose `isAbsolute`
- */
-
-module.exports = isAbsolute;
