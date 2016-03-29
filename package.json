@@ -1,6 +1,6 @@
 {
   "name": "is-absolute",
-  "description": "Returns true if a file path is absolute.",
+  "description": "Polyfill for node.js `path.isAbolute`. Returns true if a file path is absolute.",
   "version": "0.2.3",
   "homepage": "https://github.com/jonschlinkert/is-absolute",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
@@ -21,10 +21,11 @@
   },
   "dependencies": {
     "is-relative": "^0.2.1",
-    "is-windows": "^0.1.0"
+    "is-windows": "^0.1.1"
   },
   "devDependencies": {
-    "mocha": "*"
+    "gulp-format-md": "^0.1.7",
+    "mocha": "^2.4.5"
   },
   "keywords": [
     "absolute",
@@ -56,15 +57,29 @@
     "utils"
   ],
   "verb": {
+    "run": true,
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
     "related": {
       "list": [
-        "is-absolute",
-        "is-relative",
         "is-dotfile",
         "is-glob",
+        "is-relative",
         "is-unc-path",
         "is-valid-glob"
       ]
+    },
+    "reflinks": [
+      "verb"
+    ],
+    "lint": {
+      "reflinks": true
     }
   }
 }
