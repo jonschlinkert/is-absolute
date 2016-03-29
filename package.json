@@ -1,7 +1,7 @@
 {
   "name": "is-absolute",
   "description": "Polyfill for node.js `path.isAbolute`. Returns true if a file path is absolute.",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "homepage": "https://github.com/jonschlinkert/is-absolute",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/is-absolute",
