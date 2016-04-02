@@ -39,13 +39,17 @@ describe('isAbsolute()', function() {
     assert.equal(path.posix.isAbsolute('./baz'), false);
   });
 
-  it('should support node.js', function() {
+  it('should return true for absolute paths', function() {
     assert.equal(isAbsolute(__dirname), true);
     assert.equal(isAbsolute(__filename), true);
     assert.equal(isAbsolute(path.join(process.cwd())), true);
     assert.equal(isAbsolute(path.resolve(process.cwd(), 'README.md')), true);
     assert.equal(isAbsolute('/foo/a/b/c/d'), true);
     assert.equal(isAbsolute('/foo'), true);
+  });
+
+  it('should return false for relative paths', function() {
+    assert.equal(isAbsolute('a/b/c.js'), false);
     assert.equal(isAbsolute('./foo'), false);
     assert.equal(isAbsolute(path.relative(process.cwd(), 'README.md')), false);
   });
