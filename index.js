@@ -20,7 +20,7 @@ function isAbsolute(fp) {
   if (typeof fp !== 'string') {
     throw new TypeError('isAbsolute expects a string.');
   }
-  return isWindows() ? isAbsolute.win32(fp) : isAbsolute.win32(fp);
+  return isWindows() ? isAbsolute.win32(fp) : isAbsolute.posix(fp);
 }
 
 /**
