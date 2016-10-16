@@ -4,6 +4,11 @@
   "version": "0.2.5",
   "homepage": "https://github.com/jonschlinkert/is-absolute",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "contributors": [
+    "Elan Shanker (https://github.com/es128)",
+    "Jon Schlinkert <jon.schlinkert@sellside.com> (http://twitter.com/jonschlinkert)",
+    "Shinnosuke Watanabe <snnskwtnb@gmail.com> (https://shinnn.github.io)"
+  ],
   "repository": "jonschlinkert/is-absolute",
   "bugs": {
     "url": "https://github.com/jonschlinkert/is-absolute/issues"
