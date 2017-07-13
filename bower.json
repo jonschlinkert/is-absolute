@@ -11,12 +11,12 @@
     "index.js"
   ],
   "dependencies": {
-    "is-relative": "^0.2.1",
-    "is-windows": "^0.1.1"
+    "is-relative": "^1.0.0",
+    "is-windows": "^1.0.1"
   },
   "devDependencies": {
-    "gulp-format-md": "^0.1.7",
-    "mocha": "^2.4.5"
+    "gulp-format-md": "^1.0.0",
+    "mocha": "^3.4.2"
   },
   "keywords": [
     "absolute",
@@ -46,5 +46,28 @@
     "url",
     "util",
     "utils"
+  ],
+  "version": "0.2.6",
+  "contributors": [
+    "(http://sobak.pl)",
+    "Elan Shanker (https://github.com/es128)",
+    "Jon Schlinkert (http://twitter.com/jonschlinkert)",
+    "Shinnosuke Watanabe (https://shinnn.github.io)"
+  ],
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/is-absolute/issues"
+  },
+  "files": [
+    "index.js"
+  ],
+  "ignore": [
+    "actual",
+    "bower_components",
+    "fixtures",
+    "node_modules",
+    "temp",
+    "test",
+    "test.js",
+    "tmp"
   ]
 }

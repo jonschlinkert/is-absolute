@@ -6,8 +6,9 @@
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "contributors": [
     "Elan Shanker (https://github.com/es128)",
-    "Jon Schlinkert <jon.schlinkert@sellside.com> (http://twitter.com/jonschlinkert)",
-    "Shinnosuke Watanabe <snnskwtnb@gmail.com> (https://shinnn.github.io)"
+    "Jon Schlinkert (http://twitter.com/jonschlinkert)",
+    "Shinnosuke Watanabe (https://shinnn.github.io)",
+    "(http://sobak.pl)"
   ],
   "repository": "jonschlinkert/is-absolute",
   "bugs": {
@@ -25,12 +26,12 @@
     "test": "mocha"
   },
   "dependencies": {
-    "is-relative": "^0.2.1",
-    "is-windows": "^0.2.0"
+    "is-relative": "^1.0.0",
+    "is-windows": "^1.0.1"
   },
   "devDependencies": {
-    "gulp-format-md": "^0.1.7",
-    "mocha": "^2.4.5"
+    "gulp-format-md": "^1.0.0",
+    "mocha": "^3.4.2"
   },
   "keywords": [
     "absolute",
